@@ -52,7 +52,7 @@ type TemplateVersionOperations interface {
 	Delete(container *TemplateVersion) error
 }
 
-func newTemplateVersionClient(rancherClient *RancherClient) *TemplateVersionClient {
+func NewTemplateVersionClient(rancherClient *RancherClient) *TemplateVersionClient {
 	return &TemplateVersionClient{
 		rancherClient: rancherClient,
 	}

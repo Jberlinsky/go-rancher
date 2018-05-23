@@ -20,7 +20,7 @@ func constructClient(rancherBaseClient *RancherBaseClientImpl) *RancherClient {
 	client.Catalog = newCatalogClient(client)
 	client.Template = NewTemplateClient(client)
 	client.Question = newQuestionClient(client)
-	client.TemplateVersion = newTemplateVersionClient(client)
+	client.TemplateVersion = NewTemplateVersionClient(client)
 	client.Error = newErrorClient(client)
 
 	return client
