@@ -70,7 +70,7 @@ type TemplateOperations interface {
 	Delete(container *Template) error
 }
 
-func newTemplateClient(rancherClient *RancherClient) *TemplateClient {
+func NewTemplateClient(rancherClient *RancherClient) *TemplateClient {
 	return &TemplateClient{
 		rancherClient: rancherClient,
 	}
