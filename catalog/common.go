@@ -286,6 +286,10 @@ func (rancherClient *RancherBaseClientImpl) Websocket(url string, headers map[st
 	return dialer.Dial(url, http.Header(httpHeaders))
 }
 
+func (rancherClient *RancherBaseClientImpl) DoGet(url string, opts *ListOpts, respObject interface{}) error {
+	return rancherClient.doGet(url, opts, respObject)
+}
+
 func (rancherClient *RancherBaseClientImpl) doGet(url string, opts *ListOpts, respObject interface{}) error {
 	if opts == nil {
 		opts = NewListOpts()

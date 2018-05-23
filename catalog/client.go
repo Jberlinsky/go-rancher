@@ -29,6 +29,7 @@ type RancherBaseClient interface {
 	GetTypes() map[string]Schema
 	SetCustomHeaders(headers map[string]string)
 
+	DoGet(string, *ListOpts, interface{}) error
 	doGet(string, *ListOpts, interface{}) error
 	doList(string, *ListOpts, interface{}) error
 	doNext(string, interface{}) error
